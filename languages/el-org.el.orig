@@ -27,6 +27,20 @@
   (org-super-agenda-mode)
   )
 
+<<<<<<< Updated upstream
+(defvar my-super-agenda-groups
+      '(
+        (:name "Important" :priority "A")
+        (:name "Today" :scheduled today)
+        (:name "Due today" :deadline today)
+        (:habit n)
+        (:discard (:tag "homeStuff"))
+        (:name "Overdue" :deadline past)
+        (:name "General" :tag "General")
+        (:name "Emacs" :tag "Emacs")
+        )
+      )
+=======
 (defvar my-super-agenda-general-groups
       '(
         (:name "Important" :priority "A")
@@ -40,6 +54,7 @@
         )
        )
 
+>>>>>>> Stashed changes
 
 (defun my-super-agenda-general()
   "Generate my super-agenda."
@@ -51,6 +66,7 @@
     )
   )
 
+<<<<<<< Updated upstream
 (defvar my-super-agenda-home-groups
       '(
         (:name "Home General"
@@ -71,15 +87,7 @@
       )
 
 (defun my-super-agenda-home()
-  "Generate my super-agenda."
-  (interactive)
-  (org-super-agenda-mode)
-  (let
-      ((org-super-agenda-groups my-super-agenda-home-groups))
-    (org-todo-list)
-    )
-  )
-
+=======
 (defvar my-super-agenda-general-projects
   '(
     (:habit n)
@@ -91,14 +99,33 @@
   )
 
 (defun my-super-agenda-projects()
+>>>>>>> Stashed changes
   "Generate my super-agenda."
   (interactive)
   (org-super-agenda-mode)
   (let
+<<<<<<< Updated upstream
+      ((org-super-agenda-groups my-super-agenda-home-groups))
+    (org-todo-list)
+    )
+  )
+
+
+;(setq org-agenda-custom-commands
+;      '(("c" "Super Agenda" agenda
+;         (org-super-agenda-mode)
+;         ((org-super-agenda-groups
+;           '(
+;             (:name "Importatnt"
+;                    :priority "A")
+;             )))
+;         (org-agenda nil "a"))))
+=======
       ((org-super-agenda-groups my-super-agenda-general-projects))
     (org-todo-list)
     )
   )
+>>>>>>> Stashed changes
 
 (use-package toc-org
   :ensure t)
@@ -108,9 +135,6 @@
 
 (use-package calfw-org
   :ensure t)
-
-;(setq org-agenda-files (list "~/Dropbox/ORG_Files/tasks/ArchConfig.org"
-;			     "~/Dropbox/ORG_Files/tasks/LongTimeTasks.org"))
 
 (defun air-org-skip-subtree-if-priority (priority)
   "Skip an agenda subtree if it has a priority of PRIORITY.
