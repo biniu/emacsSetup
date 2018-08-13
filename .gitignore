@@ -3,3 +3,5 @@ elpa/
 places
 projectile-bookmarks.eld
 recentf
+auto-save-list/
+emacs-backup/
