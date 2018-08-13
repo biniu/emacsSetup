@@ -27,29 +27,21 @@
   (org-super-agenda-mode)
   )
 
-(setq my-super-agenda-groups
+(defvar my-super-agenda-groups
       '(
-
-        (:name "Important"
-               :priority "A")
-        (:name "Today"
-               :scheduled today)
-        (:name "Due today"
-               :deadline today)
+        (:name "Important" :priority "A")
+        (:name "Today" :scheduled today)
+        (:name "Due today" :deadline today)
         (:habit n)
         (:discard (:tag "homeStuff"))
-        (:name "Overdue"
-               :deadline past)
-        (:name "General"
-               :tag "General")
-        (:name "Emacs"
-               :tag "Emacs")
-         )
-       )
+        (:name "Overdue" :deadline past)
+        (:name "General" :tag "General")
+        (:name "Emacs" :tag "Emacs")
+        )
+      )
 
-
-(defun my-super-agenda()
-  "generates my super-agenda"
+(defun my-super-agenda-general()
+  "Generate my super-agenda."
   (interactive)
   (org-super-agenda-mode)
   (let
@@ -57,6 +49,36 @@
     (org-todo-list)
     )
   )
+
+(defvar my-super-agenda-home-groups
+      '(
+        (:name "Home General"
+               :tag "HomeGeneral"
+               :deadline today)
+        (:name "Home Bathroom"
+               :tag "HomeBathroom"
+               :deadline today)
+        (:name "Home Kittchen"
+               :tag "HomeKittchen"
+               :deadline today)
+        (:name "Home Room"
+               :tag "HomeRoom"
+               :deadline today)
+        (:discard (:anything t))
+
+        )
+      )
+
+(defun my-super-agenda-home()
+  "Generate my super-agenda."
+  (interactive)
+  (org-super-agenda-mode)
+  (let
+      ((org-super-agenda-groups my-super-agenda-home-groups))
+    (org-todo-list)
+    )
+  )
+
 
 ;(setq org-agenda-custom-commands
 ;      '(("c" "Super Agenda" agenda
