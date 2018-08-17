@@ -27,9 +27,11 @@
  '(custom-safe-themes
    (quote
     ("389c3e3577c21c9588889b3cc00d7d7d1badd073ee2cb39a6e4a123c6147ec85" default)))
+ '(helm-descbinds-mode t)
+ '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (py-autopep8 org-super-agenda dumb-jump yasnippet-snippets yasnippet helm-rtags magit swiper auto-complete company-shell use-package))))
+    (git-gutter+ git-gutter rainbow beacon rainbow-delimiters rainbow-mode auto-highlight-symbol highlight-symbol tabbar which-key helm-descbinds helm-system-packages telephone-line nyan-mode org-dashboard helm-dash py-autopep8 org-super-agenda dumb-jump yasnippet-snippets yasnippet helm-rtags magit swiper auto-complete company-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

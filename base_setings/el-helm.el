@@ -22,5 +22,8 @@
 (use-package helm-rtags
   :ensure t)
 
+(use-package helm-system-packages
+  :ensure t)
+
 (provide 'el-helm)
 ;;; el-helm ends here

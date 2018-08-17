@@ -62,6 +62,42 @@
      (add-hook 'prog-mode-hook 'fci-mode)
 )
 
+(use-package nyan-mode
+  :ensure t
+  :config
+  (nyan-mode t)
+  )
+
+(use-package telephone-line
+  :ensure t
+  :config
+  (telephone-line-mode 1)
+  )
+
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode t)
+  )
+
+(use-package auto-highlight-symbol
+  :ensure t
+  :config
+  (auto-highlight-symbol-mode)
+  )
+
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode t)
+  )
+
+(use-package rainbow-mode
+  :ensure t
+  :config
+  (rainbow-mode t)
+  )
+
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 . 50))
 (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
