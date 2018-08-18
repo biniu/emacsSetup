@@ -131,20 +131,15 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
         subtree-end
       nil)))
 
-;(setq org-agenda-custom-commands
-;      '(("d" "Daily agenda and all TODOs"
-;         ((tags "PRIORITY=\"A\""
-;                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-;                 (org-agenda-overriding-header "High-priority unfinished tasks:")))
-;         (agenda "" ((org-agenda-ndays 1)))
-;          (alltodo ""
-;                   ((org-agenda-skip-function '(or (air-org-skip-subtree-if-habit)
-;                                                   (air-org-skip-subtree-if-priority ?A)
-;                                                   (org-agenda-skip-if nil '(scheduled deadline))))
-;                    (org-agenda-overriding-header "ALL normal priority tasks:"))))
-;         ((org-agenda-compact-blocks t)))))
+(global-set-key (kbd "C-c c")
+                'org-capture)
 
-
+(setq org-capture-templates
+      '(
+        ("g" "General" entry (file+headline "~/Dropbox/ORG_Files/tasks/General.org" "General")
+	 "** TODO %?\nDEADLINE: %^T \n %i\n")
+        )
+      )
 
 (provide 'el-org)
 ;;; el-org ends here
