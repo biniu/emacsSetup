@@ -141,5 +141,35 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
         )
       )
 
+;; JSON EXPORT FUNCTION
+
+(use-package json-mode
+  :ensure t)
+
+(require 'json)
+(defun org-export-json ()
+  (interactive)
+  (let* ((tree (org-element-parse-buffer 'object nil)))
+    (org-element-map tree (append org-element-all-elements
+                                  org-element-all-objects '(plain-text))
+      (lambda (x)
+        (if (org-element-property :parent x)
+            (org-element-put-property x :parent "none"))
+        (if (org-element-property :structure x)
+            (org-element-put-property x :structure "none"))
+        ))
+    (write-region
+     (json-encode tree)
+     nil (concat (buffer-file-name) ".json"))))
+
+(defun cli-org-export-json ()
+  (let ((org-file-path (car command-line-args-left))
+        (other-load-files (cdr command-line-args-left)))
+    (mapc 'load-file other-load-files)
+    (find-file org-file-path)
+    (org-mode)
+    (message "Exporting to JSON: %s" (car command-line-args-left))
+(org-export-json)))
+
 (provide 'el-org)
 ;;; el-org ends here

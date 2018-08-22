@@ -5,3 +5,5 @@ projectile-bookmarks.eld
 recentf
 auto-save-list/
 emacs-backup/
+%backup%~
+tramp
