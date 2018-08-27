@@ -98,6 +98,8 @@
   (rainbow-mode t)
   )
 
+(display-time-mode 1)
+
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 . 50))
 (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
@@ -105,5 +107,5 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dark-cyan t)
 
-(provide 'appearance)
-;;; appearance ends here
+(provide 'el-appearance)
+;;; el-appearance.el ends here
