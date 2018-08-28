@@ -15,4 +15,4 @@
   (package-install 'use-package))
 
 
-(provide 'repos)
+(provide 'el-repos)

@@ -7,4 +7,4 @@
 (use-package yasnippet-snippets
   :ensure t)
 
-(provide el-yasnippet)
+(provide 'el-yasnippet)

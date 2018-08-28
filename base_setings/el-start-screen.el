@@ -22,4 +22,4 @@
                     (registers . 5)))
   )
 
-(provide 'start_screen)
+(provide 'el-start-screen)

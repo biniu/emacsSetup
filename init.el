@@ -20,7 +20,8 @@
 
 (load "~/Dropbox/ORG_Files/emacs.secrets" t)
 
-(require 'base_setings)
+(require 'el-base-
+         setings)
 (require 'el-languages)
 (require 'el-custom-elisp)
 

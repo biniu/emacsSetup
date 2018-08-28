@@ -33,4 +33,4 @@
   :bind ("M-s" . avy-goto-char))
 
 
-(provide 'search_packages)
+(provide 'el-search-packages)

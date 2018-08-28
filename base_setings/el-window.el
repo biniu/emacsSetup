@@ -6,7 +6,7 @@
     (global-set-key [remap other-window] 'ace-window)
     (custom-set-faces
      '(aw-leading-char-face
-       ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
+       ((t (:inherit ace-jump-face-foreground :height 3.0)))))
     ))
 
 ;; windows size
@@ -15,4 +15,4 @@
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
-(provide 'window)
+(provide 'el-window)
