@@ -11,14 +11,18 @@
   (expand-file-name "languages" user-emacs-directory))
 (defvar settings-dir
   (expand-file-name "base_setings" user-emacs-directory))
+(defvar custom_elisp-dir
+  (expand-file-name "custom_elisp" user-emacs-directory))
 
 (add-to-list 'load-path settings-dir)
 (add-to-list 'load-path languages-dir)
+(add-to-list 'load-path custom_elisp-dir)
 
 (load "~/Dropbox/ORG_Files/emacs.secrets" t)
 
 (require 'base_setings)
 (require 'el-languages)
+(require 'el-custom-elisp)
 
 
 (custom-set-variables
