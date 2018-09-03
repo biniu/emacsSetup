@@ -14,5 +14,7 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(package-refresh-contents)
+(package-initialize)
 
 (provide 'el-repos)
