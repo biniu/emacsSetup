@@ -18,8 +18,13 @@
   (setq dashboard-items '((recents  . 5)
                     (bookmarks . 5)
                     (projects . 5)
-                    (agenda . 5)
                     (registers . 5)))
   )
+
+;;(defun dashboard-insert-custom ()
+;;  (my-super-agenda-general)
+;;  )
+;;(add-to-list 'dashboard-item-generators  '(custom . dashboard-insert-custom))
+;;(add-to-list 'dashboard-items '(custom) t)
 
 (provide 'el-start-screen)
