@@ -17,6 +17,12 @@
   :init
   (global-flycheck-mode t))
 
+(use-package flycheck-inline
+  :ensure t
+  :config
+  (flycheck-inline-mode t)
+  )
+
 (use-package magit
   :ensure t
   :bind (("C-x g" . magit-status)))

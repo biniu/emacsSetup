@@ -38,10 +38,10 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (google-translate json-mode git-gutter+ git-gutter rainbow beacon rainbow-delimiters rainbow-mode auto-highlight-symbol highlight-symbol tabbar which-key helm-descbinds helm-system-packages telephone-line nyan-mode org-dashboard helm-dash py-autopep8 org-super-agenda dumb-jump yasnippet-snippets yasnippet helm-rtags magit swiper auto-complete company-shell use-package))))
+    (flycheck-pyflakes flycheck-color-mode-line flycheck-pos-tip flycheck-status-emoji flycheck-title flycheck-inline pylint google-translate json-mode git-gutter+ git-gutter rainbow beacon rainbow-delimiters rainbow-mode auto-highlight-symbol highlight-symbol tabbar which-key helm-descbinds helm-system-packages telephone-line nyan-mode org-dashboard helm-dash py-autopep8 org-super-agenda dumb-jump yasnippet-snippets yasnippet helm-rtags magit swiper auto-complete company-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-'(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
