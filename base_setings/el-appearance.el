@@ -62,12 +62,6 @@
      (add-hook 'prog-mode-hook 'fci-mode)
 )
 
-(use-package nyan-mode
-  :ensure t
-  :config
-  (nyan-mode t)
-  )
-
 (use-package telephone-line
   :ensure t
   :config
