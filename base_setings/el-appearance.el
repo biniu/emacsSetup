@@ -92,6 +92,11 @@
   (rainbow-mode t)
   )
 
+(use-package buffer-move
+  :ensure t
+  :config
+  )
+
 (display-time-mode 1)
 
 ;; set transparency
