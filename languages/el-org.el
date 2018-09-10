@@ -148,7 +148,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
   :ensure t)
 
 (require 'json)
-p(defun org-export-json ()
+(defun org-export-json ()
   (interactive)
   (let* ((tree (org-element-parse-buffer 'object nil)))
     (org-element-map tree (append org-element-all-elements
