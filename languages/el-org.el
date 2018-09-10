@@ -75,6 +75,7 @@
   (interactive)
   (org-super-agenda-mode)
   (let
+      ((org-agenda-files "~/Dropbox/ORG_Files/habbits.org"))
       ((org-super-agenda-groups my-super-agenda-home-groups))
     (org-todo-list)
     )
@@ -170,6 +171,16 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
     (org-mode)
     (message "Exporting to JSON: %s" (car command-line-args-left))
 (org-export-json)))
+
+;;; Google calendar sync
+(setq package-check-signature nil)
+
+(use-package org-gcal
+  :ensure t
+)
+
+(add-hook 'org-agenda-mode-hook (lambda () (org-gcal-sync) ))
+(add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
 
 (provide 'el-org)
 ;;; el-org ends here
