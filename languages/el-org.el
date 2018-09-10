@@ -148,7 +148,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
   :ensure t)
 
 (require 'json)
-(defun org-export-json ()
+p(defun org-export-json ()
   (interactive)
   (let* ((tree (org-element-parse-buffer 'object nil)))
     (org-element-map tree (append org-element-all-elements
@@ -181,6 +181,13 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 
 (add-hook 'org-agenda-mode-hook (lambda () (org-gcal-sync) ))
 (add-hook 'org-capture-after-finalize-hook (lambda () (org-gcal-sync) ))
+
+(use-package org-fancy-priorities
+  :ensure t
+  :hook
+  (org-mode . org-fancy-priorities-mode)
+  :config
+  (setq org-fancy-priorities-list '("!" "⬆" "⬇" "☕")))
 
 (provide 'el-org)
 ;;; el-org ends here
