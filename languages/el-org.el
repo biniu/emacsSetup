@@ -187,7 +187,7 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
   :hook
   (org-mode . org-fancy-priorities-mode)
   :config
-  (setq org-fancy-priorities-list '("!" "⬆" "⬇" "☕")))
+  (setq org-fancy-priorities-list '("HIGH" "MID" "LOW" "OPTIONAL")))
 
 (provide 'el-org)
 ;;; el-org ends here
