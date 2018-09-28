@@ -8,5 +8,6 @@
 (require 'el-helm)
 (require 'el-google)
 (require 'el-yasnippet)
+(require 'el-pocket)
 
 (provide 'el-base-setings)
