@@ -74,7 +74,7 @@
 (use-package auto-highlight-symbol
   :ensure t
   :config
-  (auto-highlight-symbol-mode)
+  (global-auto-highlight-symbol-mode 1)
   )
 
 (use-package beacon
