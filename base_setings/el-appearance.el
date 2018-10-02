@@ -25,9 +25,6 @@
 ;; Type y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; show white sapces
-(whitespace-mode 1)
-
 ;; remove trailling white spaces
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -105,6 +102,11 @@
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dark-cyan t)
+
+;; show white sapces
+;;
+(whitespace-mode 1)
+(global-whitespace-mode 1)
 
 (provide 'el-appearance)
 ;;; el-appearance.el ends here
