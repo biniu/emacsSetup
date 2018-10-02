@@ -2,6 +2,7 @@
 ;;; code:
 
 (setq org-agenda-files '("~/Dropbox/ORG_Files/tasks/"))
+(global-set-key (kbd "C-c C-a") 'org-agenda)
 
 ;; Archive done tasks
 (defun channing/archive-when-done ()
@@ -188,6 +189,9 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
   (org-mode . org-fancy-priorities-mode)
   :config
   (setq org-fancy-priorities-list '("HIGH" "MID" "LOW" "OPTIONAL")))
+
+;; Start agenda on Sunday
+(setq org-agenda-start-on-weekday 0)
 
 (provide 'el-org)
 ;;; el-org ends here
