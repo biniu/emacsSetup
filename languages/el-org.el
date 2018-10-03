@@ -193,5 +193,14 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 ;; Start agenda on Sunday
 (setq org-agenda-start-on-weekday 0)
 
+(defun my/org-add-ids-to-headlines-in-file ()
+  "Add ID properties to all headlines in the current file which
+do not already have one."
+  (interactive)
+  (org-map-entries 'org-id-get-create))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 (provide 'el-org)
 ;;; el-org ends here
