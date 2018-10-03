@@ -202,5 +202,10 @@ do not already have one."
 (add-hook 'org-mode-hook
           (lambda ()
             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
+
+(setq org-highest-priority ?A)
+(setq org-lowest-priority ?D)
+(setq org-default-priority ?D)
+
 (provide 'el-org)
 ;;; el-org ends here
