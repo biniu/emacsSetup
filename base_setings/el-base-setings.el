@@ -9,5 +9,6 @@
 (require 'el-google)
 (require 'el-yasnippet)
 (require 'el-pocket)
+(require 'el-reddit)
 
 (provide 'el-base-setings)
