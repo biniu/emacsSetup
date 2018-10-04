@@ -203,9 +203,23 @@ do not already have one."
           (lambda ()
             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 
+;; change priority range
 (setq org-highest-priority ?A)
 (setq org-lowest-priority ?D)
 (setq org-default-priority ?D)
+
+;; add creation date to TODOs
+(defun my/log-todo-creation-date (&rest ignore)
+  "Log TODO creation time in the property drawer under the key 'CREATED'."
+  (when (and (org-get-todo-state)
+             (not (org-entry-get nil "CREATED")))
+    (org-entry-put nil "CREATED" (format-time-string (cdr org-time-stamp-formats)))))
+
+(advice-add 'org-insert-todo-heading :after #'my/log-todo-creation-date)
+(advice-add 'org-insert-todo-heading-respect-content :after #'my/log-todo-creation-date)
+(advice-add 'org-insert-todo-subheading :after #'my/log-todo-creation-date)
+
+(add-hook 'org-after-todo-state-change-hook #'my/log-todo-creation-date)
 
 (provide 'el-org)
 ;;; el-org ends here
