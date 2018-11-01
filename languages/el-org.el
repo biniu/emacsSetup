@@ -15,12 +15,6 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-(use-package origami
-  :ensure t
-  :config
-  (origami-mode)
-  )
-
 (require 'org-habit)
 (use-package org-super-agenda
   :ensure t

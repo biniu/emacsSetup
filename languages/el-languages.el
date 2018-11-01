@@ -36,6 +36,17 @@
          ("M-g z" . dumb-jump-go-prefer-external-other-window))
   :config (setq dumb-jump-selector 'helm))
 
+(use-package origami
+  :ensure t
+  :bind (("M-o a c" . origami-close-all-nodes)
+         ("M-o c" . origami-close-node)
+         ("M-o o" . origami-open-node)
+         ("M-o a o" . origami-open-all-nodes))
+  :config
+  (origami-mode t)
+  )
+
+
 (use-package hydra
   :ensure t)
 
