@@ -94,6 +94,9 @@
   :config
   )
 
+(use-package rotate
+  :ensure t)
+
 (display-time-mode 1)
 
 ;; set transparency
