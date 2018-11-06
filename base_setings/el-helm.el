@@ -25,5 +25,11 @@
 (use-package helm-system-packages
   :ensure t)
 
+(use-package helm-projectile
+  :ensure t
+  :config
+  (helm-projectile-on)
+  )
+
 (provide 'el-helm)
 ;;; el-helm ends here

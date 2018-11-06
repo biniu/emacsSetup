@@ -46,6 +46,12 @@
   (origami-mode t)
   )
 
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode t)
+  (setq projectile-enable-caching t)
+  )
 
 (use-package hydra
   :ensure t)

@@ -1,7 +1,4 @@
 
-(use-package projectile
-  :ensure t)
-
 (use-package dashboard
 :ensure t
 :config
