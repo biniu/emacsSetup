@@ -11,6 +11,11 @@
 (use-package pyenv-mode
   :ensure t)
 
+(use-package sphinx-doc
+  :ensure t
+  :config
+  (sphinx-doc-mode t))
+
 (use-package importmagic
     :ensure t
     :config
