@@ -10,5 +10,6 @@
 (require 'el-yasnippet)
 (require 'el-pocket)
 (require 'el-reddit)
+(require 'el-shell)
 
 (provide 'el-base-setings)

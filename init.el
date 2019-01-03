@@ -38,7 +38,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (helm-projectile rotate ipython-shell-send ob-ipython pyenv-mode groovy-mode md4rd pandoc pocket-reader doom-themes atom-dark-theme buffer-move org-fancy-priorities org-gcal flycheck-pyflakes flycheck-color-mode-line flycheck-pos-tip flycheck-status-emoji flycheck-title flycheck-inline pylint google-translate json-mode git-gutter+ git-gutter rainbow beacon rainbow-delimiters rainbow-mode auto-highlight-symbol highlight-symbol tabbar which-key helm-descbinds helm-system-packages telephone-line nyan-mode org-dashboard helm-dash py-autopep8 org-super-agenda dumb-jump yasnippet-snippets yasnippet helm-rtags magit swiper auto-complete company-shell use-package))))
+    (helm-mt multi-term helm-projectile rotate ipython-shell-send ob-ipython pyenv-mode groovy-mode md4rd pandoc pocket-reader doom-themes atom-dark-theme buffer-move org-fancy-priorities org-gcal flycheck-pyflakes flycheck-color-mode-line flycheck-pos-tip flycheck-status-emoji flycheck-title flycheck-inline pylint google-translate json-mode git-gutter+ git-gutter rainbow beacon rainbow-delimiters rainbow-mode auto-highlight-symbol highlight-symbol tabbar which-key helm-descbinds helm-system-packages telephone-line nyan-mode org-dashboard helm-dash py-autopep8 org-super-agenda dumb-jump yasnippet-snippets yasnippet helm-rtags magit swiper auto-complete company-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
