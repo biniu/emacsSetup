@@ -19,8 +19,8 @@
 
 (use-package flycheck-inline
   :ensure t
-  :config
-  (flycheck-inline-mode t)
+;;  :config
+;;  (flycheck-inline-mode t)
   )
 
 (use-package magit
