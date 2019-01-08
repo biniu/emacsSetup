@@ -1,0 +1,29 @@
+
+* BASIC STUFF
+** [[https://github.com/jaypei/emacs-neotree][NeoTree]]
+*** Key bindings
+**** <F8> - open NeoTree
+**** n/p - next/previous line
+**** SPC/RET/TAB - open current item
+**** U - go up a dir
+**** g - refresh
+**** A - max/min NeoTree wind
+**** H - toggle display hidden files
+**** O - Recursively open a directory
+**** C-c C-n - Create a file or create a directory if filename ends with a ‘/’
+**** C-c C-d - Delete a file or a directory
+**** C-c C-r - Rename a file or a directory
+**** C-c C-c - Change the root directory
+**** C-c C-p - Copy a file or a directory
+** Search
+*** swipper
+*** avy
+** [[https://github.com/gregsexton/origami.el][Origami]]
+*** Key bindings
+
+** Other keys
+*** C-c t - google translate
+
+* LANGUAGES
+** org mode
+** tmp
