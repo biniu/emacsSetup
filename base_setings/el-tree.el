@@ -6,6 +6,7 @@
   :ensure t
   :config
   (global-set-key [f8] 'neotree-toggle)
-  (setq neo-theme (if (display-graphic-p) '(setq neo-theme (if (display-graphic-p) 'icons 'arrow))icons 'arrow)))
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  )
 
 (provide 'el-tree)
