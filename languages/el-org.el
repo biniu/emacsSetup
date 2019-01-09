@@ -193,9 +193,9 @@ do not already have one."
   (interactive)
   (org-map-entries 'org-id-get-create))
 
-(add-hook 'org-mode-hook
-          (lambda ()
-            (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
+;(add-hook 'org-mode-hook
+;          (lambda ()
+;            (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 
 ;; change priority range
 (setq org-highest-priority ?A)
@@ -214,6 +214,14 @@ do not already have one."
 (advice-add 'org-insert-todo-subheading :after #'my/log-todo-creation-date)
 
 (add-hook 'org-after-todo-state-change-hook #'my/log-todo-creation-date)
+
+
+;(advice-add 'org-insert-todo-heading :after #'my/org-add-ids-to-headlines-in-file)
+;(advice-add 'org-insert-todo-heading-respect-content :after #'my/org-add-ids-to-headlines-in-file)
+;(advice-add 'org-insert-todo-subheading :after #'my/org-add-ids-to-headlines-in-file)
+
+;(add-hook 'org-after-todo-state-change-hook #'my/org-add-ids-to-headlines-in-file)
+
 
 (provide 'el-org)
 ;;; el-org ends here
