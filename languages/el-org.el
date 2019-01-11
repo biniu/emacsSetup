@@ -222,6 +222,7 @@ do not already have one."
 
 ;(add-hook 'org-after-todo-state-change-hook #'my/org-add-ids-to-headlines-in-file)
 
+(add-hook 'before-save-hook 'org-table-recalculate-buffer-tables)
 
 (provide 'el-org)
 ;;; el-org ends here
