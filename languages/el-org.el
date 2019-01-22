@@ -132,7 +132,9 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 
 (setq org-capture-templates
       '(
-        ("g" "General" entry (file+headline "~/Dropbox/ORG_Files/tasks/General.org" "General")
+        ("g" "General" entry(file+headline "~/Dropbox/ORG_Files/tasks/General.org" "General")
+	 "** TODO %?\nDEADLINE: %^T \n %i\n")
+        ("b" "Backlog" entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org" "Backlog")
 	 "** TODO %?\nDEADLINE: %^T \n %i\n")
         )
       )
