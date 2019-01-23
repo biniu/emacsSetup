@@ -132,10 +132,36 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
 
 (setq org-capture-templates
       '(
-        ("g" "General" entry(file+headline "~/Dropbox/ORG_Files/tasks/General.org" "General")
-	 "** TODO %?\nDEADLINE: %^T \n %i\n")
-        ("b" "Backlog" entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org" "Backlog")
-	 "** TODO %?\nDEADLINE: %^T \n %i\n")
+        ("b" "Backlog"
+         entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org"
+                             "Backlog")
+         "** TODO %?\nDEADLINE: %^T \n %i\n")
+
+        ("t" "Trivial"
+         entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org"
+                             "Trivial(U 2m)")
+         "*** TODO %? %i\n")
+
+        ("s" "Short"
+         entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org"
+                             "Short(U 10m)")
+         "*** TODO %? %i\n")
+
+        ("n" "Normal"
+         entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org"
+                             "Normal(U 1h)")
+         "*** TODO %? %i\n")
+
+        ("l" "Long"
+         entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org"
+                             "Long(U 1d)")
+         "*** TODO %? %i\n")
+
+        ("o" "Other"
+         entry(file+headline "~/Dropbox/ORG_Files/tasks/TODO.org"
+                             "Other")
+         "*** TODO %? %i\n")
+
         )
       )
 
