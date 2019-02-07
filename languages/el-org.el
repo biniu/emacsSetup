@@ -237,11 +237,11 @@ do not already have one."
              (not (org-entry-get nil "CREATED")))
     (org-entry-put nil "CREATED" (format-time-string (cdr org-time-stamp-formats)))))
 
-(advice-add 'org-insert-todo-heading :after #'my/log-todo-creation-date)
-(advice-add 'org-insert-todo-heading-respect-content :after #'my/log-todo-creation-date)
-(advice-add 'org-insert-todo-subheading :after #'my/log-todo-creation-date)
+;; (advice-add 'org-insert-todo-heading :after #'my/log-todo-creation-date)
+;; (advice-add 'org-insert-todo-heading-respect-content :after #'my/log-todo-creation-date)
+;; (advice-add 'org-insert-todo-subheading :after #'my/log-todo-creation-date)
 
-(add-hook 'org-after-todo-state-change-hook #'my/log-todo-creation-date)
+;; (add-hook 'org-after-todo-state-change-hook #'my/log-todo-creation-date)
 
 
 ;(advice-add 'org-insert-todo-heading :after #'my/org-add-ids-to-headlines-in-file)
@@ -251,6 +251,13 @@ do not already have one."
 ;(add-hook 'org-after-todo-state-change-hook #'my/org-add-ids-to-headlines-in-file)
 
 (add-hook 'before-save-hook 'org-table-recalculate-buffer-tables)
+
+(setq org-todo-keywords  '(
+                           ; (sequence "TODO" "|" "DONE")
+                           (sequence "TODO" "DOING" "BLOCKED" "|" "DONE" "ARCHIVED")
+                           ; (sequence "|" "CANCELED")
+                           )
+      )
 
 (provide 'el-org)
 ;;; el-org ends here
