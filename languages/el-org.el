@@ -259,5 +259,29 @@ do not already have one."
                            )
       )
 
+(use-package org-pomodoro
+  :ensure t
+  :commands (org-pomodoro)
+  :config
+  (setq alert-user-configuration (quote ((((:category . "org-pomodoro")) libnotify nil)))))
+
+(defun my/org-pomodoro-text-time ()
+  "Return status info about org-pomodoro and if org-pomodoro is not running, try to print info about org-clock.
+    If either org-pomodoro or org-clock aren't active, print \"No Active Task \" "
+  (interactive)
+  (cond ((equal :none org-pomodoro-state)
+         (if (org-clock-is-active)
+             (format "Clocked task: %d minutes - %s"
+                     (org-clock-get-clocked-time) (substring-no-properties org-clock-heading)
+                     "No Active task")))
+        ((equal :pomodoro org-pomodoro-state)
+         (format "%d - Pomodoro: %d minutes - %s"
+                 org-pomodoro-count (/ (org-pomodoro-remaining-seconds) 60) (substring-no-properties org-clock-heading)))
+        ((equal :short-break org-pomodoro-state) "Short Break")
+        ((equal :long-break org-pomodoro-state)  "Long Break")))
+
+;; cmd
+;; emacsclient -e '(my/org-pomodoro-text-time)'
+
 (provide 'el-org)
 ;;; el-org ends here
