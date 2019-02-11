@@ -97,7 +97,8 @@
 (use-package rotate
   :ensure t)
 
-(display-time-mode 1)
+;; clock
+;; (display-time-mode 1)
 
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(95 . 50))
