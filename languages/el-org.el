@@ -252,9 +252,10 @@ do not already have one."
 
 (add-hook 'before-save-hook 'org-table-recalculate-buffer-tables)
 
+;; https://orgmode.org/guide/Multi_002dstate-workflows.html
 (setq org-todo-keywords  '(
                            ; (sequence "TODO" "|" "DONE")
-                           (sequence "TODO" "DOING" "BLOCKED" "|" "DONE" "ARCHIVED")
+                           (sequence "TODO(t)" "INPROGRES(i)" "BLOCKED(b)" "|" "DONE(d)" "ARCHIVED(a)")
                            ; (sequence "|" "CANCELED")
                            )
       )
