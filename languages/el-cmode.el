@@ -13,6 +13,10 @@
   :config
   (cmake-ide-setup))
 
+(use-package cmake-mode
+  :ensure t
+)
+
 (use-package clang-format
   :ensure t
   :config

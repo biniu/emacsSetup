@@ -34,7 +34,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org-pomodoro yasnippet-snippets which-key use-package try toc-org telephone-line sphinx-doc rotate rainbow-mode pylint pyenv-mode py-autopep8 pocket-reader pandoc origami org-super-agenda org-gcal org-fancy-priorities org-dashboard org-bullets neotree md4rd magit json-mode importmagic hydra hungry-delete helm-system-packages helm-rtags helm-projectile helm-mt helm-gitignore groovy-mode google-translate flycheck-pyflakes flycheck-inline fill-column-indicator dumb-jump doom-themes dashboard counsel cmake-ide clang-format calfw-org calfw buffer-move beacon auto-highlight-symbol ace-window ac-helm))))
+    (cmake-mode org-pomodoro yasnippet-snippets which-key use-package try toc-org telephone-line sphinx-doc rotate rainbow-mode pylint pyenv-mode py-autopep8 pocket-reader pandoc origami org-super-agenda org-gcal org-fancy-priorities org-dashboard org-bullets neotree md4rd magit json-mode importmagic hydra hungry-delete helm-system-packages helm-rtags helm-projectile helm-mt helm-gitignore groovy-mode google-translate flycheck-pyflakes flycheck-inline fill-column-indicator dumb-jump doom-themes dashboard counsel cmake-ide clang-format calfw-org calfw buffer-move beacon auto-highlight-symbol ace-window ac-helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
