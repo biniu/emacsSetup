@@ -25,7 +25,7 @@
 (require 'el-languages)
 (require 'el-custom-elisp)
 
-(server-start)
+;;(server-start)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
