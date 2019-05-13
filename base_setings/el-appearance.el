@@ -16,6 +16,9 @@
 (tool-bar-mode -1)
 ;; remove menu bar
 (menu-bar-mode -1)
+;; set RAM and file size limit to 100MB
+(setq gc-cons-threshold 100000000)
+(setq large-file-warning-threshold 100000000)
 ;; always show line numbers
 (setq linum-format " %4d \u2502 ") ;; Set solid separator for line number
 (global-linum-mode 1)
