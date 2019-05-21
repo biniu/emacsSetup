@@ -2,13 +2,13 @@
 ;; Basic programing settings
 
 ;; Auto completion
-(use-package auto-complete
-  :ensure t
-  :init
-  (progn
-    (ac-config-default)
-    (global-auto-complete-mode t)
-    ))
+;; (use-package auto-complete
+;;   :ensure t
+;;   :init
+;;   (progn
+;;     (ac-config-default)
+;;     (global-auto-complete-mode t)
+;;     ))
 
 
 ;; on the fly syntax checking
@@ -22,6 +22,34 @@
 ;;  :config
 ;;  (flycheck-inline-mode t)
   )
+
+(use-package lsp-mode
+  :ensure t
+  :init
+  )
+
+(use-package lsp-ui
+  :ensure t
+  :init
+  )
+
+(use-package helm-lsp
+  :ensure t
+  :init
+  )
+
+(use-package lsp-treemacs
+  :ensure t
+  :init
+  )
+
+(use-package lsp-origami
+  :ensure t
+  :config (add-hook 'origami-mode-hook #'lsp-origami-mode)
+  )
+
+;; (use-package lsp-ui :commands lsp-ui-mode)
+;; (use-package company-lsp :commands company-lsp)
 
 (use-package magit
   :ensure t
