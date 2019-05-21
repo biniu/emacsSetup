@@ -34,7 +34,7 @@
 
 (use-package ac-helm
   :ensure t
-  :configxs
+  :config
   (global-set-key (kbd "C-:") 'ac-complete-with-helm)
   (define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)
   )
