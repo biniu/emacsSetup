@@ -48,6 +48,11 @@
   :config (add-hook 'origami-mode-hook #'lsp-origami-mode)
   )
 
+(use-package company-lsp
+  :ensure t
+  :init
+  )
+
 ;; (use-package lsp-ui :commands lsp-ui-mode)
 ;; (use-package company-lsp :commands company-lsp)
 
