@@ -32,9 +32,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" default)))
  '(package-selected-packages
    (quote
-    (lsp-treemacs helm-lsp lsp-ui lsp-mode cmake-mode org-pomodoro yasnippet-snippets which-key use-package try toc-org telephone-line sphinx-doc rotate rainbow-mode pylint pyenv-mode py-autopep8 pocket-reader pandoc origami org-super-agenda org-gcal org-fancy-priorities org-dashboard org-bullets neotree md4rd magit json-mode importmagic hydra hungry-delete helm-system-packages helm-rtags helm-projectile helm-mt helm-gitignore groovy-mode google-translate flycheck-pyflakes flycheck-inline fill-column-indicator dumb-jump doom-themes dashboard counsel cmake-ide clang-format calfw-org calfw buffer-move beacon auto-highlight-symbol ace-window ac-helm))))
+    (dracula-theme company-lsp lsp-treemacs helm-lsp lsp-ui lsp-mode cmake-mode org-pomodoro yasnippet-snippets which-key use-package try toc-org telephone-line sphinx-doc rotate rainbow-mode pylint pyenv-mode py-autopep8 pocket-reader pandoc origami org-super-agenda org-gcal org-fancy-priorities org-dashboard org-bullets neotree md4rd magit json-mode importmagic hydra hungry-delete helm-system-packages helm-rtags helm-projectile helm-mt helm-gitignore groovy-mode google-translate flycheck-pyflakes flycheck-inline fill-column-indicator dumb-jump doom-themes dashboard counsel cmake-ide clang-format calfw-org calfw buffer-move beacon auto-highlight-symbol ace-window ac-helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

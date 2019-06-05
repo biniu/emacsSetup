@@ -108,8 +108,8 @@
 (add-to-list 'default-frame-alist '(alpha . (95 . 50)))
 
 ;; Custom theme
-;(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
-;(load-theme 'dark-cyan t)
+;;(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
+;;(load-theme 'dark-cyan t)
 
 (use-package doom-themes
   :ensure t)
@@ -128,7 +128,7 @@
 ;; Enable custom neotree theme (all-the-icons must be installed!)
 ;(doom-themes-neotree-config)
 ;; or for treemacs users
-;(doom-themes-treemacs-config)
+(doom-themes-treemacs-config)
 
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
